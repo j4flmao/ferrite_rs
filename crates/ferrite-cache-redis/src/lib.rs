@@ -33,8 +33,8 @@
 
 use std::sync::Arc;
 
-use fr_config::ConfigService;
 use ferrite_macros::{inject, injectable, module};
+use fr_config::ConfigService;
 use redis::{Client, Cmd};
 use serde::{de::DeserializeOwned, Serialize};
 use thiserror::Error;

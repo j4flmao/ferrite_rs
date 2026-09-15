@@ -36,8 +36,8 @@ use std::sync::Arc;
 
 use base64::{engine::general_purpose::STANDARD as B64, Engine as _};
 use ferrite_auth_jwt::{JwtClaims, JwtError, JwtService};
-use fr_config::ConfigService;
 use ferrite_macros::{controller, impl_controller, inject, injectable, module};
+use fr_config::ConfigService;
 use hmac::{Hmac, Mac};
 use rand::RngCore;
 use reqwest::Client as HttpClient;

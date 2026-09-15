@@ -29,11 +29,11 @@
 
 use std::sync::Arc;
 
-use fr_config::ConfigService;
 use ferrite_framework::__export::inventory;
 use ferrite_framework::all_controller_routes;
 use ferrite_framework::extract::Json as HttpJson;
 use ferrite_macros::{controller, impl_controller, inject, injectable, module};
+use fr_config::ConfigService;
 use serde::Serialize;
 use utoipa::openapi::path::{HttpMethod, OperationBuilder, PathItem};
 use utoipa::openapi::request_body::RequestBodyBuilder;

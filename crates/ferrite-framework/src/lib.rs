@@ -17,13 +17,13 @@
 //! }
 //! ```
 
-pub use fr_config::ConfigService;
 pub use ferrite_http::extract::{Path, Query, State};
 pub use ferrite_http::{
     all_controller_routes, extract, ControllerRoutes, DefaultValuePipe, ExceptionFilter, Guard,
     HttpError, HttpResult, Interceptor, Middleware, Next, ParseIntPipe, Pipe, PipeError,
     RequestCtx, RoutePipeline, RouteSpec,
 };
+pub use fr_config::ConfigService;
 pub use fr_core::{
     all_modules, all_providers, find_module, lookup_module, lookup_provider, sort_providers,
     sort_providers_with, AnyArc, Container, DiagReport, Injectable, Module, ModuleDescriptor,

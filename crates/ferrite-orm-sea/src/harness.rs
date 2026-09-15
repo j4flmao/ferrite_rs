@@ -32,8 +32,8 @@ use std::fs;
 use std::path::{Path, PathBuf};
 use std::time::SystemTime;
 
-use fr_config::ConfigService;
 use ferrite_orm::OrmError;
+use fr_config::ConfigService;
 
 use sea_orm::{ConnectionTrait, Database, DatabaseConnection, Statement};
 

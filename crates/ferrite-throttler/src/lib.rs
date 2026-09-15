@@ -34,10 +34,10 @@ use axum::{
     response::{IntoResponse, Response},
 };
 use dashmap::DashMap;
-use fr_config::ConfigService;
 use ferrite_http::{Guard, HttpError, Interceptor, Next, RequestCtx};
 use ferrite_macros::{inject, injectable, module};
 use fnv::FnvBuildHasher;
+use fr_config::ConfigService;
 use thiserror::Error;
 
 /// The result of `ThrottlerService::hit` on success.
