@@ -1,0 +1,20 @@
+[package]
+name = "fr-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "The Ferrite CLI: new / forge / up / build / test / add / db"
+default-run = "fr"
+
+[[bin]]
+name = "fr"
+path = "src/main.rs"
+
+[dependencies]
+clap = { workspace = true, features = ["derive"] }
+anyhow = { workspace = true }
+serde = { workspace = true }
+toml = { workspace = true }
+serde_json = { workspace = true }
+colored = "3"

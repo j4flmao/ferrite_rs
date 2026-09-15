@@ -1,0 +1,59 @@
+- name: bug
+  color: d73a4a
+  description: Something isn't working as expected
+
+- name: enhancement
+  color: a2eeef
+  description: New feature or improvement
+
+- name: breaking
+  color: b60205
+  description: Introduces a backwards-incompatible change
+
+- name: docs
+  color: 0075ca
+  description: Documentation improvements or additions
+
+- name: chore
+  color: c5def5
+  description: Maintenance and housekeeping tasks
+
+- name: dependencies
+  color: 0366d6
+  description: Dependency updates (usually via Dependabot)
+
+- name: testing
+  color: 1d76db
+  description: Tests, fixtures, and testing tooling
+
+- name: ci
+  color: fbca04
+  description: CI/CD workflows and pipelines
+
+- name: framework
+  color: 0e8a16
+  description: ferrite-* framework crates
+
+- name: cli
+  color: 0e8a16
+  description: fr-cli (the `fr` command) and templates
+
+- name: examples
+  color: 5319e7
+  description: Example applications under examples/
+
+- name: good first issue
+  color: 7057ff
+  description: Good for newcomers
+
+- name: help wanted
+  color: 008672
+  description: Extra attention is needed
+
+- name: wontfix
+  color: ffffff
+  description: This will not be worked on
+
+- name: skip-changelog
+  color: 6f42c1
+  description: Exclude from the release changelog

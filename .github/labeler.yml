@@ -1,0 +1,36 @@
+framework:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'crates/ferrite-framework/**'
+          - 'crates/fr-core/**'
+          - 'crates/ferrite-http/**'
+          - 'crates/ferrite-config/**'
+          - 'crates/ferrite-orm/**'
+          - 'crates/ferrite-macros/**'
+          - 'crates/ferrite-*/**'
+
+cli:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'crates/fr-cli/**'
+
+examples:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'examples/**'
+
+docs:
+  - changed-files:
+      - any-glob-to-any-file:
+          - '**/*.md'
+
+ci:
+  - changed-files:
+      - any-glob-to-any-file:
+          - '.github/**'
+
+dependencies:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'Cargo.toml'
+          - 'Cargo.lock'

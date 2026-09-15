@@ -1,0 +1,18 @@
+[package]
+name = "ferrite-cqrs"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Command, query, and event bus for Ferrite applications"
+
+[dependencies]
+fr-core = { workspace = true }
+ferrite-config = { workspace = true }
+inventory = { workspace = true }
+async-trait = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+dashmap = { workspace = true }
+tokio = { workspace = true }

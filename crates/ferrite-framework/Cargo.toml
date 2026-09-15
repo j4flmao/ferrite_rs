@@ -1,0 +1,22 @@
+[package]
+name = "ferrite-framework"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "A batteries-included backend framework for Rust: compile-time DI, modules, and macro routing"
+
+[dependencies]
+fr-core = { version = "=0.1.0", path = "../fr-core" }
+ferrite-http = { version = "=0.1.0", path = "../ferrite-http" }
+ferrite-config = { version = "=0.1.0", path = "../ferrite-config" }
+ferrite-validation = { version = "=0.1.0", path = "../ferrite-validation" }
+ferrite-orm = { version = "=0.1.0", path = "../ferrite-orm" }
+ferrite-macros = { version = "=0.1.0", path = "../ferrite-macros" }
+inventory = { workspace = true }
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+axum = { workspace = true }
+tower = { workspace = true }
+async-trait = { workspace = true }

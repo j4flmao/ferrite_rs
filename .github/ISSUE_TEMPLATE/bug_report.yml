@@ -1,0 +1,67 @@
+name: Bug report
+description: Report a bug in Ferrite (framework crates or the fr-cli).
+title: '[Bug]: '
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for taking the time to file a bug report. Please fill in as much detail as you can so we can reproduce the issue.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Minimal code or commands that trigger the bug.
+      placeholder: |
+        1. `fr new my-app`
+        2. `cd my-app && cargo run`
+        3. See error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What actually happened, including any error output.
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Output of `fr --version` or the crate versions in your Cargo.toml.
+      placeholder: 'fr 0.1.0 · ferrite-framework = "=0.1.0"'
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      description: What OS are you running Ferrite on?
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - WSL2
+        - Other
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Anything else relevant, such as logs, screenshots, or related issues.

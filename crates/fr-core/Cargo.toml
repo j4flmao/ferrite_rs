@@ -1,0 +1,13 @@
+[package]
+name = "fr-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Ferrite kernel: compile-time DI, module graph, bootstrap"
+
+[dependencies]
+inventory = { workspace = true }
+serde = { workspace = true }
+tokio = { workspace = true }
+async-trait = { workspace = true }

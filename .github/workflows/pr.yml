@@ -1,0 +1,54 @@
+name: PR
+
+on:
+  pull_request_target:
+    types: [opened, edited, reopened, synchronize, unlocked]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  label:
+    name: Apply path labels
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/labeler@v7
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          sync-labels: true
+
+  readiness:
+    name: PR readiness check
+    runs-on: ubuntu-latest
+    if: ${{ !github.event.pull_request.draft }}
+    steps:
+      - name: Block WIP titles
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const title = context.payload.pull_request.title ?? '';
+            if (/^(wip|draft|dnm)[\s:-]|\[(wip|draft)\]|^\[wip\]/i.test(title)) {
+              core.setFailed(`PR title looks like work-in-progress: "${title}"`);
+            }
+
+  conflict:
+    name: Check merge conflicts
+    runs-on: ubuntu-latest
+    # Dependabot PRs are rebased by Dependabot itself, and GitHub already
+    # surfaces conflicts on the pull request page.
+    if: ${{ github.actor != 'dependabot[bot]' }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Fail if PR conflicts with main
+        run: |
+          git fetch origin main --depth 1
+          if ! git merge-tree --write-tree origin/main HEAD >/dev/null 2>&1; then
+            echo "::error::This pull request conflicts with main and must be rebased."
+            exit 1
+          fi

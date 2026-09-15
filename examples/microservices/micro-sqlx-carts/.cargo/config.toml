@@ -1,0 +1,23 @@
+# Ferrite: hot-reload optimizations for `ferrite up`
+# Keep release builds on the default LLVM backend; only tweak dev profile here.
+
+[build]
+# Incremental is on by default, but pin it to be explicit for newcomers.
+incremental = true
+
+# NOTE: Uncomment the rustflags below ONLY if you have the cranelift codegen
+# backend installed. It is *not* shipped with stable Rust by default.
+#   rustup component add rustc-codegen-cranelift-preview --toolchain nightly
+# or:  cargo install rustc_codegen_cranelift
+#
+# [target.x86_64-unknown-linux-gnu]
+# rustflags = ["-C", "linker=clang", "-C", "link-arg=-fuse-ld=lld", "-C", "codegen-backend=cranelift"]
+#
+# [target.x86_64-apple-darwin]
+# rustflags = ["-C", "link-arg=-fuse-ld=lld", "-C", "codegen-backend=cranelift"]
+#
+# [target.x86_64-pc-windows-msvc]
+# rustflags = ["-C", "linker=rust-lld.exe", "-C", "codegen-backend=cranelift"]
+#
+# [target.x86_64-pc-windows-gnu]
+# rustflags = ["-C", "linker=lld", "-C", "link-arg=-fuse-ld=lld", "-C", "codegen-backend=cranelift"]

@@ -1,0 +1,3 @@
+# Git hooks are executed through a POSIX shell; keep them LF-only so the
+# shebang stays valid on Windows checkouts (core.autocrlf=true).
+.husky/* text eol=lf

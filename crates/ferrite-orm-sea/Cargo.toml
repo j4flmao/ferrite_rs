@@ -1,0 +1,25 @@
+[package]
+name = "ferrite-orm-sea"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "SeaORM-backed store adapter for ferrite-orm (multi-DB, feature-gated)"
+
+[dependencies]
+fr-core.workspace = true
+ferrite-config.workspace = true
+ferrite-orm.workspace = true
+async-trait.workspace = true
+sea-orm = { version = "2", default-features = false, features = ["runtime-tokio-rustls", "macros"], optional = true }
+
+[features]
+default = []
+sqlite = ["dep:sea-orm", "sea-orm?/sqlx-sqlite"]
+postgres = ["dep:sea-orm", "sea-orm?/sqlx-postgres"]
+mysql = ["dep:sea-orm", "sea-orm?/sqlx-mysql"]
+sea-orm = ["sqlite"]
+
+[dev-dependencies]
+serde.workspace = true
+tokio.workspace = true

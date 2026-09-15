@@ -1,0 +1,21 @@
+﻿[package]
+name = "ferrite-nats"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "NATS message transport for Ferrite microservices"
+
+[dependencies]
+ferrite-framework = { workspace = true }
+fr-core = { workspace = true }
+ferrite-http = { workspace = true }
+ferrite-config = { workspace = true }
+ferrite-macros = { workspace = true }
+tokio = { workspace = true }
+async-trait = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+inventory = { workspace = true }
+dashmap = { workspace = true }

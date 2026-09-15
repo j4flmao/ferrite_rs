@@ -1,0 +1,24 @@
+[package]
+name = "ferrite-orm-diesel"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Diesel-backed store adapter for ferrite-orm (multi-DB, feature-gated)"
+
+[dependencies]
+fr-core.workspace = true
+ferrite-config.workspace = true
+ferrite-orm.workspace = true
+async-trait.workspace = true
+diesel = { version = "2", default-features = false, features = ["r2d2"], optional = true }
+
+[features]
+default = []
+sqlite = ["dep:diesel", "diesel?/sqlite"]
+postgres = ["dep:diesel", "diesel?/postgres"]
+mysql = ["dep:diesel", "diesel?/mysql"]
+diesel = ["sqlite"]
+
+[dev-dependencies]
+tokio.workspace = true

@@ -1,0 +1,51 @@
+name: Feature request
+description: Suggest an idea for Ferrite.
+title: '[Feature]: '
+labels: ['enhancement']
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for suggesting a feature. Please describe the problem you are trying to solve and the shape of the solution you have in mind.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: What pain point does this feature address? What do you want to achieve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: A concrete description of the API or behavior you would like to see.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Workarounds or alternate designs you considered.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which part of the project does this affect?
+      options:
+        - Framework crates (ferrite-*)
+        - fr-cli (project scaffolding / commands)
+        - Templates
+        - Documentation
+        - CI/CD
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Mockups, links, or anything else that helps illustrate the request.

@@ -1,0 +1,35 @@
+﻿[package]
+name = "mono-diesel-ecom"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[features]
+default = ["sqlite"]
+sqlite = ["ferrite-orm-diesel/sqlite"]
+postgres = ["ferrite-orm-diesel/postgres"]
+mysql = ["ferrite-orm-diesel/mysql"]
+
+[dependencies]
+ferrite-framework = { path = "../../../crates/ferrite-framework" }
+ferrite-orm = { path = "../../../crates/ferrite-orm" }
+ferrite-orm-diesel = { path = "../../../crates/ferrite-orm-diesel", default-features = false }
+ferrite-kafka = { path = "../../../crates/ferrite-kafka" }
+ferrite-cache-redis = { path = "../../../crates/ferrite-cache-redis" }
+ferrite-swagger = { path = "../../../crates/ferrite-swagger" }
+ferrite-auth-jwt = { path = "../../../crates/ferrite-auth-jwt" }
+ferrite-health = { path = "../../../crates/ferrite-health" }
+ferrite-throttler = { path = "../../../crates/ferrite-throttler" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+utoipa = { workspace = true }
+tokio = { version = "1", features = ["full"] }
+tower-http = { version = "0.6", features = ["cors", "trace"] }
+uuid = { version = "1", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["clock", "serde"] }
+argon2 = "0.5"
+rand = "0.8"
+dashmap = "6"
+anyhow = "1"
+ferrite-validation = { path = "../../../crates/ferrite-validation" }
+ferrite-macros = { path = "../../../crates/ferrite-macros" }

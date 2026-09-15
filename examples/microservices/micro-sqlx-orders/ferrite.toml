@@ -1,0 +1,7 @@
+[app]
+name = "micro-sqlx-orders"
+
+[server]
+transport = "http"
+host = "0.0.0.0"
+port = 3007

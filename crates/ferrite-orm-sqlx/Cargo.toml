@@ -1,0 +1,24 @@
+[package]
+name = "ferrite-orm-sqlx"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "SQLx-backed store adapter for ferrite-orm (multi-DB, feature-gated)"
+
+[dependencies]
+fr-core.workspace = true
+ferrite-config.workspace = true
+ferrite-orm.workspace = true
+async-trait.workspace = true
+sqlx = { version = "0.8", default-features = false, features = ["runtime-tokio-rustls", "macros"], optional = true }
+
+[features]
+default = []
+sqlite = ["dep:sqlx", "sqlx?/sqlite"]
+postgres = ["dep:sqlx", "sqlx?/postgres"]
+mysql = ["dep:sqlx", "sqlx?/mysql"]
+sqlx = ["sqlite"]
+
+[dev-dependencies]
+tokio.workspace = true

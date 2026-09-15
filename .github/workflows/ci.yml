@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  checks:
+    name: fmt / clippy / build / test / doc
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+
+      - name: Cache cargo
+        uses: swatinem/rust-cache@v2
+
+      - name: Check formatting
+        run: cargo fmt --all -- --check
+
+      - name: Clippy (framework crates, warnings denied)
+        run: cargo clippy --workspace --all-targets --exclude 'micro-*' --exclude 'mono-*' -- -D warnings
+
+      - name: Build workspace
+        run: cargo build --workspace --locked
+
+      - name: Test workspace
+        run: cargo test --workspace --locked
+
+      - name: Build docs
+        run: cargo doc --workspace --no-deps

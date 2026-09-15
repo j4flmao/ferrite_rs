@@ -1,0 +1,43 @@
+﻿[package]
+name = "micro-sqlx-orders"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[features]
+default = ["sqlite"]
+sqlite = ["ferrite-orm-sqlx/sqlite"]
+postgres = ["ferrite-orm-sqlx/postgres"]
+mysql = ["ferrite-orm-sqlx/mysql"]
+
+[dependencies]
+ferrite-framework = { path = "../../../crates/ferrite-framework" }
+ferrite-orm = { path = "../../../crates/ferrite-orm" }
+ferrite-orm-sqlx = { path = "../../../crates/ferrite-orm-sqlx", default-features = false }
+ferrite-cqrs = { path = "../../../crates/ferrite-cqrs" }
+ferrite-grpc = { path = "../../../crates/ferrite-grpc" }
+ferrite-kafka = { path = "../../../crates/ferrite-kafka" }
+ferrite-cache-redis = { path = "../../../crates/ferrite-cache-redis" }
+ferrite-swagger = { path = "../../../crates/ferrite-swagger" }
+ferrite-auth-jwt = { path = "../../../crates/ferrite-auth-jwt" }
+ferrite-health = { path = "../../../crates/ferrite-health" }
+ferrite-throttler = { path = "../../../crates/ferrite-throttler" }
+ferrite-validation = { path = "../../../crates/ferrite-validation" }
+ferrite-macros = { path = "../../../crates/ferrite-macros" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+utoipa = { workspace = true }
+tokio = { version = "1", features = ["full"] }
+axum = { workspace = true }
+tower-http = { version = "0.6", features = ["cors", "trace"] }
+uuid = { version = "1", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["clock", "serde"] }
+argon2 = "0.5"
+rand = "0.8"
+dashmap = "6"
+anyhow = "1"
+tonic = { workspace = true }
+prost = { workspace = true }
+prost-types = { workspace = true }
+inventory = { workspace = true }
+async-trait = { workspace = true }

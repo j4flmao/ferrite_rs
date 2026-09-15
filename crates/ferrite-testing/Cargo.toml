@@ -1,0 +1,26 @@
+﻿[package]
+name = "ferrite-testing"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Testing utilities for Ferrite apps: TestingModule builder with overrides + TestApp HTTP harness"
+
+[dependencies]
+ferrite-framework = { workspace = true }
+fr-core = { workspace = true }
+ferrite-http = { workspace = true }
+ferrite-config = { workspace = true }
+ferrite-macros = { workspace = true }
+ferrite-validation = { workspace = true }
+
+inventory = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+async-trait = { workspace = true }
+tokio = { workspace = true }
+thiserror = { workspace = true }
+axum = { workspace = true }
+bytes = { workspace = true }
+
+reqwest = { workspace = true }

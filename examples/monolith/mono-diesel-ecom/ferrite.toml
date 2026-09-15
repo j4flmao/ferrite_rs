@@ -1,0 +1,7 @@
+[app]
+name = "mono-diesel-ecom"
+
+[server]
+transport = "http"
+host = "0.0.0.0"
+port = 3001

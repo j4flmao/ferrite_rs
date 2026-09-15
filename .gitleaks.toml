@@ -1,0 +1,7 @@
+# Extend the upstream default ruleset instead of replacing it.
+[extend]
+useDefault = true
+
+# .env.example files contain placeholder values, not real secrets.
+[allowlist]
+paths = [".*\\.env\\.example$"]
