@@ -1,4 +1,4 @@
-﻿[package]
+[package]
 name = "mono-ws-chat"
 version = "0.1.0"
 edition = "2021"
@@ -9,7 +9,7 @@ ferrite-framework = { workspace = true }
 fr-core = { workspace = true }
 ferrite-macros = { workspace = true }
 ferrite-http = { workspace = true }
-ferrite-config = { workspace = true }
+fr-config = { workspace = true }
 ferrite-validation = { workspace = true }
 ferrite-health = { workspace = true }
 ferrite-auth-jwt = { workspace = true }

@@ -17,7 +17,7 @@
 //! }
 //! ```
 
-pub use ferrite_config::ConfigService;
+pub use fr_config::ConfigService;
 pub use ferrite_http::extract::{Path, Query, State};
 pub use ferrite_http::{
     all_controller_routes, extract, ControllerRoutes, DefaultValuePipe, ExceptionFilter, Guard,
@@ -62,7 +62,7 @@ pub use axum::response::Response;
 /// Crate-internal re-exports consumed by macro-generated code. Not public API.
 #[doc(hidden)]
 pub mod __export {
-    pub use ferrite_config::load_env_file;
+    pub use fr_config::load_env_file;
     pub use inventory;
     pub use tokio;
 }

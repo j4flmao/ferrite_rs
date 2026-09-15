@@ -10,7 +10,7 @@ use std::sync::Arc;
 use std::time::Duration;
 
 use async_trait::async_trait;
-use ferrite_config::ConfigService;
+use fr_config::ConfigService;
 use fr_core::{Container, ModuleDescriptor, OnApplicationBootstrap, ProviderEntry, Scope};
 use serde::Deserialize;
 use thiserror::Error;

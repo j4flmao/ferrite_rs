@@ -34,7 +34,7 @@ use axum::{
     response::{IntoResponse, Response},
 };
 use dashmap::DashMap;
-use ferrite_config::ConfigService;
+use fr_config::ConfigService;
 use ferrite_http::{Guard, HttpError, Interceptor, Next, RequestCtx};
 use ferrite_macros::{inject, injectable, module};
 use fnv::FnvBuildHasher;

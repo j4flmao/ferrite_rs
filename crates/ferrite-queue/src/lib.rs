@@ -49,7 +49,7 @@ use std::time::{Duration, SystemTime, UNIX_EPOCH};
 
 use async_trait::async_trait;
 use dashmap::DashMap;
-use ferrite_config::ConfigService;
+use fr_config::ConfigService;
 use fr_core::{ModuleDescriptor, Scope};
 use serde::{Deserialize, Serialize};
 use serde_json::Value;

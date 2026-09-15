@@ -1,4 +1,4 @@
-﻿[package]
+[package]
 name = "ferrite-auth-jwt"
 version.workspace = true
 edition.workspace = true
@@ -10,7 +10,7 @@ description = "JWT authentication guards and utilities for Ferrite"
 ferrite-framework = { workspace = true }
 fr-core = { workspace = true }
 ferrite-http = { workspace = true }
-ferrite-config = { workspace = true }
+fr-config = { workspace = true }
 ferrite-macros = { workspace = true }
 ferrite-validation = { workspace = true }
 

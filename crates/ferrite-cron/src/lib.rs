@@ -34,7 +34,7 @@ use std::time::{Duration, SystemTime, UNIX_EPOCH};
 use chrono::{DateTime, TimeZone, Utc};
 use cron::Schedule;
 use dashmap::DashMap;
-use ferrite_config::ConfigService;
+use fr_config::ConfigService;
 use fr_core::{ModuleDescriptor, OnApplicationBootstrap, ProviderEntry, Scope};
 use thiserror::Error;
 use tokio::task::JoinHandle;

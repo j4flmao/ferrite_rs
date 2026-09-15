@@ -29,7 +29,7 @@
 
 use std::sync::Arc;
 
-use ferrite_config::ConfigService;
+use fr_config::ConfigService;
 use ferrite_framework::__export::inventory;
 use ferrite_framework::all_controller_routes;
 use ferrite_framework::extract::Json as HttpJson;

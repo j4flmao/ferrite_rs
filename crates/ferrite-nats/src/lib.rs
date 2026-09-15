@@ -42,7 +42,7 @@ use std::time::Duration;
 
 use async_trait::async_trait;
 use dashmap::DashMap;
-use ferrite_config::ConfigService;
+use fr_config::ConfigService;
 use fr_core::{ModuleDescriptor, OnApplicationBootstrap, ProviderEntry, Scope};
 use serde::{Deserialize, Serialize};
 use thiserror::Error;

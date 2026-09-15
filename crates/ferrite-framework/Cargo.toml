@@ -9,7 +9,7 @@ description = "A batteries-included backend framework for Rust: compile-time DI,
 [dependencies]
 fr-core = { version = "=0.1.0", path = "../fr-core" }
 ferrite-http = { version = "=0.1.0", path = "../ferrite-http" }
-ferrite-config = { version = "=0.1.0", path = "../ferrite-config" }
+fr-config = { version = "=0.1.0", path = "../fr-config" }
 ferrite-validation = { version = "=0.1.0", path = "../ferrite-validation" }
 ferrite-orm = { version = "=0.1.0", path = "../ferrite-orm" }
 ferrite-macros = { version = "=0.1.0", path = "../ferrite-macros" }

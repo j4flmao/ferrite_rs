@@ -29,7 +29,7 @@ use std::time::Duration;
 
 use bytes::Bytes;
 use dashmap::DashMap;
-use ferrite_config::ConfigService;
+use fr_config::ConfigService;
 use fr_core::{ModuleDescriptor, OnApplicationBootstrap, ProviderEntry, Scope};
 use http::{Request, Response, StatusCode};
 use http_body_util::Full;

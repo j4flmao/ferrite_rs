@@ -49,12 +49,12 @@ pub struct SqlxPick {
 impl SqlxPick {
     #[doc(hidden)]
     pub fn deps() -> Vec<TypeId> {
-        vec![TypeId::of::<ferrite_config::ConfigService>()]
+        vec![TypeId::of::<fr_config::ConfigService>()]
     }
 
     #[doc(hidden)]
     pub fn factory(c: &Container) -> AnyArc {
-        let config: Arc<ferrite_config::ConfigService> = c.get();
+        let config: Arc<fr_config::ConfigService> = c.get();
         let url = config.get_or("DATABASE_URL", default_database_url());
         match DatabaseKind::from_url(&url).and_then(validate_kind_enabled) {
             Ok(()) => Arc::new(SqlxPick { url }) as AnyArc,

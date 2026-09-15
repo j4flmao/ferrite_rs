@@ -8,7 +8,7 @@ description = "SeaORM-backed store adapter for ferrite-orm (multi-DB, feature-ga
 
 [dependencies]
 fr-core.workspace = true
-ferrite-config.workspace = true
+fr-config.workspace = true
 ferrite-orm.workspace = true
 async-trait.workspace = true
 sea-orm = { version = "2", default-features = false, features = ["runtime-tokio-rustls", "macros"], optional = true }

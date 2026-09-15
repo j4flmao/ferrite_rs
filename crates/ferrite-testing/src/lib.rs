@@ -151,9 +151,9 @@ impl TestingModule {
             std::fs::create_dir_all(&dir).ok();
             let file: String = pairs.iter().map(|(k, v)| format!("{k}={v}\n")).collect();
             std::fs::write(dir.join(".env"), file).ok();
-            let cfg = ferrite_config::ConfigService::load_from(&dir);
+            let cfg = fr_config::ConfigService::load_from(&dir);
             let _ = std::fs::remove_dir_all(&dir);
-            c.seed_singleton::<ferrite_config::ConfigService>(Arc::new(cfg));
+            c.seed_singleton::<fr_config::ConfigService>(Arc::new(cfg));
         }));
         self
     }

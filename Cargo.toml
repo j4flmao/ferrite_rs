@@ -4,7 +4,7 @@ members = [
     "crates/fr-core",
     "crates/ferrite-macros",
     "crates/ferrite-http",
-    "crates/ferrite-config",
+    "crates/fr-config",
     "crates/ferrite-validation",
     "crates/ferrite-orm",
     "crates/ferrite-orm-sea",
@@ -50,7 +50,7 @@ repository = "https://github.com/j4flmao/ferrite_rs"
 ferrite-framework = { version = "=0.1.0", path = "crates/ferrite-framework" }
 fr-core = { version = "=0.1.0", path = "crates/fr-core" }
 ferrite-http = { version = "=0.1.0", path = "crates/ferrite-http" }
-ferrite-config = { version = "=0.1.0", path = "crates/ferrite-config" }
+fr-config = { version = "=0.1.0", path = "crates/fr-config" }
 ferrite-validation = { version = "=0.1.0", path = "crates/ferrite-validation" }
 ferrite-macros = { version = "=0.1.0", path = "crates/ferrite-macros" }
 ferrite-orm = { version = "=0.1.0", path = "crates/ferrite-orm" }

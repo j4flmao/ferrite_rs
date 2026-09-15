@@ -1,4 +1,4 @@
-﻿[package]
+[package]
 name = "ferrite-swagger"
 version.workspace = true
 edition.workspace = true
@@ -10,7 +10,7 @@ description = "OpenAPI / Swagger UI for Ferrite HTTP apps"
 ferrite-framework = { workspace = true }
 fr-core = { workspace = true }
 ferrite-http = { workspace = true }
-ferrite-config = { workspace = true }
+fr-config = { workspace = true }
 ferrite-macros = { workspace = true }
 ferrite-validation = { workspace = true }
 

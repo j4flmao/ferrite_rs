@@ -42,7 +42,7 @@ pub use async_trait::async_trait;
 use axum::extract::FromRequestParts;
 use axum::http::request::Parts;
 use axum::http::StatusCode;
-use ferrite_config::ConfigService;
+use fr_config::ConfigService;
 use ferrite_http::Guard as GuardTrait;
 use ferrite_http::RequestCtx;
 use ferrite_macros::{inject, injectable, module};

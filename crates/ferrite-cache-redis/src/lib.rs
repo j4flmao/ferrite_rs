@@ -33,7 +33,7 @@
 
 use std::sync::Arc;
 
-use ferrite_config::ConfigService;
+use fr_config::ConfigService;
 use ferrite_macros::{inject, injectable, module};
 use redis::{Client, Cmd};
 use serde::{de::DeserializeOwned, Serialize};
