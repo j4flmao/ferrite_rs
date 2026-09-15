@@ -154,7 +154,7 @@ matching framework release so the ecosystem stays consistent.
 | — | `fr-core` | Kernel: bootstrap, DI container, module graph, lifecycle hooks |
 | — | `ferrite-macros` | `#[module]`, `#[controller]`, `#[injectable]`, ... |
 | — | `ferrite-http` | Axum-based HTTP transport |
-| — | `ferrite-config` | `.env` + `ferrite.toml` layered configuration |
+| — | `fr-config` | `.env` + `ferrite.toml` layered configuration |
 | — | `ferrite-orm` | ORM abstraction (`Entity`, `Repository`, `Store`) |
 | `auth-jwt` | `ferrite-auth-jwt` | JWT strategy, `AuthGuard`, current-user extractor |
 | `auth-oauth` | `ferrite-auth-oauth` | OAuth2 / OIDC login flows |
